@@ -39,12 +39,12 @@ A document verification system leveraging AI (EasyOCR + Gemini API) and blockcha
    ```bash
    git clone https://github.com/Digeesha/-Decentralized_Identity_Verification.git
    cd -Decentralized_Identity_Verification
-**
-Create & activate Python venv**
-
+**Create & activate Python venv**
+   ```bash
 python3 -m venv venv
 source venv/bin/activate      # macOS/Linux
-**Install Python dependencies**
+****Install Python dependencies****
+ ```bash
 pip install -r backend/requirements.txt
 pip install easyocr opencv-python-headless
 
@@ -52,12 +52,14 @@ pip install easyocr opencv-python-headless
 Copy the example file and edit it:
 cp backend/.env.
 example backend/.env
+
 **Then open backend/.env and fill in:**
 GANACHE_URL=http://127.0.0.1:7545
 PRIVATE_KEY=<YOUR_GANACHE_ACCOUNT_PRIVATE_KEY>
 FROM_ADDRESS=<YOUR_GANACHE_ACCOUNT_ADDRESS>
 CHAIN_ID=1337
 GOOGLE_API_KEY=<YOUR_GOOGLE_CLOUD_API_KEY>
+
 **Deploy the smart contract**
 npm install -g truffle          # if not already installed
 cd backend
@@ -66,9 +68,8 @@ truffle migrate --reset --network development
 cd ..
 
 
-Running the App
+**Running the App**
 Start Ganache on port 7545 (default).
-
 Run the Flask server
 cd backend
 source ../venv/bin/activate     # if not already active
