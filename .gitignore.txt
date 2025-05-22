@@ -1,0 +1,20 @@
+# Python
+__pycache__
+.pyc
+venv
+.env
+
+# Databases
+.db
+.sqbpro
+
+# Archives
+templates.zip
+
+# IDEs
+.vscode
+.sublime-project
+.sublime-workspace
+
+# OS
+.DS_Store

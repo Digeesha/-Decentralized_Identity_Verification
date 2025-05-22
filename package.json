@@ -1,0 +1,12 @@
+{
+  "name": "decentralized_identity_verification",
+  "version": "1.0.0",
+  "description": "## **Vision** VeriChain aims to revolutionize document verification by leveraging AI for text extraction and blockchain for secure, tamper-proof data storage. The system automates the identity verification process, improving efficiency, security, and scalability for entry and exit management systems.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decentralized Identity Verification</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.jpg') }}" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+  <div class="loader-wraper" style="display: none;">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </div>
+
+  <section class="home py-5 d-flex align-items-center" id="header" style="background: linear-gradient(to right, #1cb5e0, #000851); min-height: 100vh;">
+    <div class="container text-light py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h1 class="headline">
+            Decentralized <span class="text-info">Identity Verification</span><br>
+            Using AI & Blockchain
+          </h1>
+          <p class="para py-3">
+            A secure, scalable platform for tamper-proof document verification.<br>
+            Powered by advanced AI extraction and blockchain authentication.
+          </p>
+          <div class="my-3">
+            <a class="btn bg-danger text-white" href="/upload_details">Upload Details</a>
+            <a class="btn bg-danger text-white" href="/verify">Go Verify</a>
+          </div>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <img src="{{ url_for('static', filename='banner02-1.jpg') }}" alt="Blockchain Identity" class="img-fluid rounded shadow-lg">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

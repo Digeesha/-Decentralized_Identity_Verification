@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decentralized Identity Verification</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.jpg') }}" type="image/x-icon" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <style>
+    .verify-result {
+      color: green;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .error-message {
+      color: red;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .bg-white {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+  <section class="home py-5 d-flex align-items-center" id="header" style="background: linear-gradient(to right, #1cb5e0, #000851); min-height: 100vh;">
+    <div class="container text-light py-5">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="fade-right">
+          <h1 class="headline">
+            Decentralized <span class="text-info">Identity Verification</span><br>
+            Using AI & Blockchain
+          </h1>
+          <p class="para py-3">
+            A secure, scalable platform for tamper-proof document verification.<br>
+            Powered by advanced AI extraction and blockchain authentication.
+          </p>
+          <div class="my-3">
+            <a class="btn bg-danger text-white" href="/upload_details">Upload Details</a>
+            <a class="btn bg-danger text-white" href="/verify">Go Verify</a>
+          </div>
+        </div>
+
+        <!-- Right Result Section -->
+        <div class="col-md-6">
+          <div class="bg-white p-8 rounded-lg shadow-xl">
+            <div class="text-center mb-6">
+              <h2 class="text-2xl font-semibold">Verification Result</h2>
+            </div>
+
+            <div class="w-full mb-4">
+              <!-- Display verification result -->
+              {% if verify_result %}
+                <p class="verify-result">{{ verify_result }}</p>
+              {% else %}
+                <p class="error-message">No verification result available. Please check if the document is valid or try again.</p>
+              {% endif %}
+            </div>
+
+            <!-- Display Document Hash -->
+            <div class="w-full mb-4">
+              <p><strong>Document Hash:</strong> {{ document_hash or "No hash available" }}</p>
+            </div>
+
+            <div class="mt-6 text-center">
+              <a href="/" class="btn btn-primary py-2 px-6 rounded-full transition duration-200 ease-in-out">Back to Home</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+</html>
